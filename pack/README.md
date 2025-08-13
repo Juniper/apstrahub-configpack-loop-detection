@@ -2,7 +2,7 @@
 
 ## What does this Config Pack Do
 
-This config pack creates the iba elements required to track loops.
+This config pack creates the iba elements, configlet, and property sets required to track loops.
 It does the following.
 * Collect the results of the command show loop-detect enhanced interface from all leaf and access devices in the blueprint.
 * Raise an anomaly if the Current status field of any interface is equal to Loop-detected.
