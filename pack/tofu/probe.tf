@@ -5,14 +5,14 @@ resource "apstra_raw_json" "probe" {
   url = format("/api/blueprints/%s/probes",var.blueprint_id)
   payload   = <<-EOT
   {
-      "label": "Loop Detect Status",
+      "label": "${var.name}",
       "description": "",
       "processors": [
         {
           "name": "Loop Detect Status",
           "type": "extensible_data_collector",
           "properties": {
-            "service_name": "Loop_Detect_Schema_${var.blueprint_id}",
+            "service_name": "${var.name}_${var.blueprint_id}",
             "service_interval": "120",
             "value_map": {},
             "graph_query": [

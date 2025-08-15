@@ -6,7 +6,7 @@ resource "apstra_datacenter_configlet" "configlet" {
   depends_on = [
     apstra_datacenter_property_set.loop_detect_ps
   ]
-  name = "Lightweight Loop Detection for Junos"
+  name = "${var.name}"
   generators = [
     {
       config_style = "junos",
